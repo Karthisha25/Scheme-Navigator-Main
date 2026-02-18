@@ -3,11 +3,15 @@ const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const path = require("path");
 const { MongoClient } = require("mongodb");
+
 const app = express();
 
-const PORT = 3000;
+// ✅ VERY IMPORTANT FOR RENDER
+const PORT = process.env.PORT || 3000;
 
-const mongoURL = "mongodb+srv://rtsr:12345@cluster0.x9kidvw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+// ✅ YOUR MONGODB CONNECTION STRING
+const mongoURL = "mongodb+srv://rtsr:rtsr123@cluster0.x9kidvw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
 const dbName = "schemeNavigatorDB";
 const userCollectionName = "USER_DETAILS";
 const schemesCollectionName = "SCHEMES";
@@ -18,15 +22,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 
-MongoClient.connect(mongoURL, { useUnifiedTopology: true })
+// ✅ CONNECT TO MONGODB
+MongoClient.connect(mongoURL)
   .then(client => {
     db = client.db(dbName);
     users = db.collection(userCollectionName);
     schemes = db.collection(schemesCollectionName);
     console.log("✅ Connected to MongoDB Atlas");
   })
-  .catch(err => console.error("❌ MongoDB connection error:", err));
+  .catch(err => {
+    console.error("❌ MongoDB connection error:", err);
+  });
 
+// ✅ REGISTER ROUTE
 app.post("/register", async (req, res) => {
   const { first_name, last_name, email, phone, password } = req.body;
 
@@ -37,6 +45,7 @@ app.post("/register", async (req, res) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
+
     await users.insertOne({
       first_name,
       last_name,
@@ -47,12 +56,14 @@ app.post("/register", async (req, res) => {
     });
 
     res.json({ success: true });
+
   } catch (err) {
     console.error("Registration error:", err);
     res.json({ success: false, error: "Server error." });
   }
 });
 
+// ✅ LOGIN ROUTE
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -74,12 +85,14 @@ app.post("/login", async (req, res) => {
     };
 
     res.json({ success: true, user: userInfo });
+
   } catch (err) {
     console.error(err);
     res.json({ success: false, error: "Server error." });
   }
 });
 
+// ✅ FILTER ROUTE
 const parseFilterValue = (value) => {
   if (!value || value === "any" || value === "none" || value === "null") return null;
   return value.split("/");
@@ -87,6 +100,7 @@ const parseFilterValue = (value) => {
 
 app.post("/filter-schemes", async (req, res) => {
   const filters = req.body;
+
   try {
     const query = {};
 
@@ -106,13 +120,16 @@ app.post("/filter-schemes", async (req, res) => {
     }
 
     const result = await schemes.find(query).toArray();
+
     res.json({ success: true, schemes: result });
+
   } catch (err) {
     console.error("Filter error:", err);
     res.json({ success: false, error: "Server error." });
   }
 });
 
+// ✅ START SERVER
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}/coverpage.html`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
