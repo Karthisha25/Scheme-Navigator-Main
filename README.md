@@ -1,30 +1,61 @@
 Scheme Navigator
 
- Problem:
-Many citizens in India are unaware of the government schemes they are eligible for. Navigating government portals can be confusing, especially for students, small business owners , farmers, and women from rural areas.
+Scheme Navigator is a web-based application that helps users find government schemes based on their personal details and eligibility criteria.
 
-Solution:
-Scheme Navigator is a simple web app that helps users discover government schemes by entering their:
-- Age
-- Gender
-- Income range
-- Category (student, MSME, etc.)
+Features
+User registration and login
+User authentication
+MongoDB database integration
+Filter government schemes based on user details
+Simple and user-friendly web interface
+Dynamic scheme results
+Technologies Used
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js, Express.js
+Database: MongoDB Atlas
+Authentication: bcrypt
+Environment Variables: dotenv
+How to Run This Project
+Clone the repository:
 
-The app then filters and displays relevant schemes to them in a user-friendly format.
-
----
- Built With:
-- Python (Flask)
-- HTML, CSS
-- Bootstrap
-
----
-
- How to Run This Project:
-
-1. Clone the repository:
 git clone https://github.com/Karthisha25/Scheme-Navigator-Main.git
 
-2. Move into project folder: cd Scheme-Navigator-Main
-3. Install dependencies : pip install flask
-4. Run this application: python main.py
+Move into the project folder:
+
+cd Scheme-Navigator-Main
+
+Install the dependencies:
+
+npm install
+
+Create a .env file in the project folder and add your MongoDB connection string:
+
+MONGO_URI=your_mongodb_connection_string
+
+Do not upload the .env file to GitHub.
+
+Start the application:
+
+node server.js
+
+Open the application in your browser:
+
+http://localhost:3000
+
+Database
+
+This project uses MongoDB Atlas.
+
+Database name: schemeNavigatorDB
+
+Collections:
+
+USER_DETAILS
+SCHEMES
+Project Structure
+
+The project contains the frontend HTML pages, CSS and JavaScript files, along with the Node.js backend server and MongoDB integration.
+
+Author
+
+Karthisha Veeramachaneni
