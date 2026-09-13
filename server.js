@@ -10,9 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ✅ YOUR MONGODB CONNECTION STRING
-const mongoURL = "mongodb+srv://rtsr:rtsr123@cluster0.x9kidvw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
-const dbName = "schemeNavigatorDB";
+const mongoURL = process.env.MONGO_URI;
 const userCollectionName = "USER_DETAILS";
 const schemesCollectionName = "SCHEMES";
 
