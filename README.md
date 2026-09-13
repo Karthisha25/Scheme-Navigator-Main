@@ -1,61 +1,119 @@
-Scheme Navigator
+# 🌐 Scheme Navigator
 
-Scheme Navigator is a web-based application that helps users find government schemes based on their personal details and eligibility criteria.
+> A web-based application that helps users discover government schemes based on their personal details and eligibility criteria.
 
-Features
-User registration and login
-User authentication
-MongoDB database integration
-Filter government schemes based on user details
-Simple and user-friendly web interface
-Dynamic scheme results
-Technologies Used
-Frontend: HTML, CSS, JavaScript
-Backend: Node.js, Express.js
-Database: MongoDB Atlas
-Authentication: bcrypt
-Environment Variables: dotenv
-How to Run This Project
-Clone the repository:
+---
 
-git clone https://github.com/Karthisha25/Scheme-Navigator-Main.git
+## ✨ Features
 
-Move into the project folder:
+- 🔐 User Registration & Login
+- 👤 User Authentication
+- 🗂️ Government Scheme Filtering
+- 🎯 Eligibility-Based Scheme Recommendations
+- 🗄️ MongoDB Database Integration
+- 💻 Simple and User-Friendly Interface
 
-cd Scheme-Navigator-Main
+---
 
-Install the dependencies:
+## 🛠️ Technologies Used
 
-npm install
+| Technology | Purpose |
+|------------|---------|
+| HTML | Frontend Structure |
+| CSS | Styling |
+| JavaScript | Frontend Functionality |
+| Node.js | Backend Runtime |
+| Express.js | Backend Framework |
+| MongoDB Atlas | Database |
+| bcrypt | Password Hashing |
+| dotenv | Environment Configuration |
 
-Create a .env file in the project folder and add your MongoDB connection string:
+---
 
-MONGO_URI=your_mongodb_connection_string
+## 🚀 How to Run This Project
 
-Do not upload the .env file to GitHub.
+### 1. Clone the Repository
 
-Start the application:
+    git clone https://github.com/Karthisha25/Scheme-Navigator-Main.git
 
-node server.js
+### 2. Open the Project Folder
 
-Open the application in your browser:
+    cd Scheme-Navigator-Main
 
-http://localhost:3000
+### 3. Install Dependencies
 
-Database
+    npm install
 
-This project uses MongoDB Atlas.
+### 4. Configure Environment Variables
 
-Database name: schemeNavigatorDB
+Create a `.env` file in the project root and add:
 
-Collections:
+    MONGO_URI=your_mongodb_connection_string
 
-USER_DETAILS
-SCHEMES
-Project Structure
+⚠️ Do not upload your `.env` file or expose your MongoDB credentials.
 
-The project contains the frontend HTML pages, CSS and JavaScript files, along with the Node.js backend server and MongoDB integration.
+### 5. Start the Server
 
-Author
+    node server.js
 
-Karthisha Veeramachaneni
+### 6. Open the Application
+
+    http://localhost:3000
+
+---
+
+## 🗄️ Database
+
+**Database:** `schemeNavigatorDB`
+
+**Collections:**
+
+- `USER_DETAILS`
+- `SCHEMES`
+
+---
+
+## 🔄 How It Works
+
+    User
+      ↓
+    Registration / Login
+      ↓
+    Enter Personal Details
+      ↓
+    System Filters Schemes
+      ↓
+    Eligible Government Schemes
+      ↓
+    Display Results
+
+---
+
+## 📁 Project Structure
+
+    Scheme-Navigator-Main/
+    │
+    ├── server.js
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    │
+    ├── login.html
+    ├── registration.html
+    ├── result.html
+    ├── age.html
+    ├── caste.html
+    ├── education.html
+    ├── gender.html
+    ├── income.html
+    ├── maritalstatus.html
+    ├── residence.html
+    └── coverpage.html
+
+---
+
+## 👩‍💻 Author
+
+**Karthisha Veeramachaneni**
+
+⭐ If you find this project useful, consider giving it a star!
