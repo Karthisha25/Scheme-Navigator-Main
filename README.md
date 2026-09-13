@@ -1,30 +1,119 @@
-Scheme Navigator
+# 🌐 Scheme Navigator
 
- Problem:
-Many citizens in India are unaware of the government schemes they are eligible for. Navigating government portals can be confusing, especially for students, small business owners , farmers, and women from rural areas.
-
-Solution:
-Scheme Navigator is a simple web app that helps users discover government schemes by entering their:
-- Age
-- Gender
-- Income range
-- Category (student, MSME, etc.)
-
-The app then filters and displays relevant schemes to them in a user-friendly format.
-
----
- Built With:
-- Python (Flask)
-- HTML, CSS
-- Bootstrap
+> A web-based application that helps users discover government schemes based on their personal details and eligibility criteria.
 
 ---
 
- How to Run This Project:
+## ✨ Features
 
-1. Clone the repository:
-git clone https://github.com/Karthisha25/Scheme-Navigator-Main.git
+- 🔐 User Registration & Login
+- 👤 User Authentication
+- 🗂️ Government Scheme Filtering
+- 🎯 Eligibility-Based Scheme Recommendations
+- 🗄️ MongoDB Database Integration
+- 💻 Simple and User-Friendly Interface
 
-2. Move into project folder: cd Scheme-Navigator-Main
-3. Install dependencies : pip install flask
-4. Run this application: python main.py
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| HTML | Frontend Structure |
+| CSS | Styling |
+| JavaScript | Frontend Functionality |
+| Node.js | Backend Runtime |
+| Express.js | Backend Framework |
+| MongoDB Atlas | Database |
+| bcrypt | Password Hashing |
+| dotenv | Environment Configuration |
+
+---
+
+## 🚀 How to Run This Project
+
+### 1. Clone the Repository
+
+    git clone https://github.com/Karthisha25/Scheme-Navigator-Main.git
+
+### 2. Open the Project Folder
+
+    cd Scheme-Navigator-Main
+
+### 3. Install Dependencies
+
+    npm install
+
+### 4. Configure Environment Variables
+
+Create a `.env` file in the project root and add:
+
+    MONGO_URI=your_mongodb_connection_string
+
+⚠️ Do not upload your `.env` file or expose your MongoDB credentials.
+
+### 5. Start the Server
+
+    node server.js
+
+### 6. Open the Application
+
+    http://localhost:3000
+
+---
+
+## 🗄️ Database
+
+**Database:** `schemeNavigatorDB`
+
+**Collections:**
+
+- `USER_DETAILS`
+- `SCHEMES`
+
+---
+
+## 🔄 How It Works
+
+    User
+      ↓
+    Registration / Login
+      ↓
+    Enter Personal Details
+      ↓
+    System Filters Schemes
+      ↓
+    Eligible Government Schemes
+      ↓
+    Display Results
+
+---
+
+## 📁 Project Structure
+
+    Scheme-Navigator-Main/
+    │
+    ├── server.js
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    │
+    ├── login.html
+    ├── registration.html
+    ├── result.html
+    ├── age.html
+    ├── caste.html
+    ├── education.html
+    ├── gender.html
+    ├── income.html
+    ├── maritalstatus.html
+    ├── residence.html
+    └── coverpage.html
+
+---
+
+## 👩‍💻 Author
+
+**Karthisha Veeramachaneni**
+
+⭐ If you find this project useful, consider giving it a star!
