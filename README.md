@@ -15,6 +15,21 @@
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page]<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/600fec28-8cc2-4cc9-9266-701a062f78bb" />
+
+
+### 🎯 Eligibility Selection
+![Gender Selection]<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/41a93e07-627b-4a5b-9f34-0fa9158a3f6c" />
+
+
+### 📋 Filtered Results
+![Filtered Results]<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2888b9c4-1544-424c-957f-9f41b60d8d37" />
+
+
+
 ## 🛠️ Technologies Used
 
 | Technology | Purpose |
