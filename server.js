@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 // ✅ YOUR MONGODB CONNECTION STRING
 const mongoURL = process.env.MONGO_URI;
+const dbName = "schemeNavigatorDB";
 const userCollectionName = "USER_DETAILS";
 const schemesCollectionName = "SCHEMES";
 
