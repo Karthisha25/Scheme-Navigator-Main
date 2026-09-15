@@ -1,8 +1,16 @@
 # 🌐 Scheme Navigator
 
-> A web-based application that helps users discover government schemes based on their personal details and eligibility criteria.
+> A full-stack web application that recommends eligible government schemes based on a user's personal details and eligibility criteria.
 
----
+Scheme Navigator simplifies the process of finding relevant government schemes by allowing users to register, enter their details, and receive personalized scheme recommendations.
+
+### 🛠️ Tech Stack
+
+**Frontend:** HTML, CSS, JavaScript  
+**Backend:** Node.js, Express.js  
+**Database:** MongoDB Atlas  
+**Security:** bcrypt  
+**Configuration:** dotenv
 
 ## ✨ Features
 
